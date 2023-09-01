@@ -1,11 +1,11 @@
-node('built-in') 
+node('master') 
 {
-    stage('Continuous Download') 
+    stage('Continuous Download_loans') 
 	{
-    git 'https://github.com/devopswithwahab/maven.git'
+    		git branch: 'master', url: 'https://github.com/devopswithwahab/maven.git'
 	}
     stage('Continuous Build_loans') 
 	{
-    sh label: '', script: 'mvn package'
+    		sh 'mvn package'
 	}
 }
